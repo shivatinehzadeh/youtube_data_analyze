@@ -6,3 +6,5 @@ textblob
 requests
 psycopg2
 uvicorn
+plotly
+kaleido

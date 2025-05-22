@@ -32,6 +32,6 @@ class VideoSchema(BaseModel):
     title_subjectivity: float
 
     class Config:
-        orm_mode = True
+        from_attributes = True
         
 Base.metadata.create_all(bind=engine)
