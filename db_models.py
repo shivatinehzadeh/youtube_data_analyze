@@ -1,6 +1,6 @@
 from sqlalchemy import  Column, String, Integer, DateTime, Float
 from sqlalchemy.ext.declarative import declarative_base
-from base import engine
+from db_session import engine
 from pydantic import BaseModel
 
 Base = declarative_base()
@@ -12,7 +12,6 @@ class Video(Base):
     video_id = Column(String, primary_key=True, index=True)
     title = Column(String)
     channel_title = Column(String)
-    published_at = Column(DateTime)
     category_id = Column(Integer)
     view_count = Column(Integer)
     like_count = Column(Integer)
@@ -25,7 +24,6 @@ class VideoSchema(BaseModel):
     video_id: str
     title: str
     channel_title: str
-    published_at: str 
     category_id: int
     view_count: int
     like_count: int

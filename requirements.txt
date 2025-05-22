@@ -1,0 +1,8 @@
+fastapi
+pandas
+sqlalchemy
+pydantic
+textblob
+requests
+psycopg2
+uvicorn
